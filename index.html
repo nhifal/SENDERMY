@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice SENDER MY</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #2c2c2c);
+    padding: 20px;
+}
+
+.invoice-container {
+    background: #ffffff;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.logo {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #000;
+}
+
+.header-line {
+    height: 3px;
+    background: linear-gradient(to right, #000, #555);
+    margin: 15px 0 30px 0;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.top-info div {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: #000;
+    color: #fff;
+    padding: 12px;
+    font-weight: 600;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.total-box {
+    text-align: right;
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.payment {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.print-btn {
+    margin-top: 30px;
+    text-align: center;
+}
+
+button {
+    padding: 12px 25px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .invoice-container{
+        padding: 20px;
+    }
+    .top-info{
+        flex-direction: column;
+    }
+}
+
+/* Hide button when printing */
+@media print {
+    button {
+        display: none;
+    }
+    body {
+        background: #fff;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="invoice-container">
+
+    <div class="logo">SENDER MY</div>
+    <div class="header-line"></div>
+
+    <h2>INVOICE</h2>
+
+    <div class="top-info">
+        <div>
+            <p><strong>Nomor:</strong> INV-004/II/2026</p>
+            <p><strong>Tanggal:</strong> 13 Februari 2026</p>
+            <p><strong>Jatuh Tempo:</strong> 20 Februari 2026</p>
+        </div>
+        <div>
+            <p><strong>Dari:</strong> NIFAL</p>
+            <p><strong>Kepada:</strong> SENDER MY</p>
+        </div>
+    </div>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Deskripsi</th>
+            <th>Qty</th>
+            <th>Harga</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Perancangan Konsep & Struktur Website</td>
+            <td>1</td>
+            <td>Rp 250.000</td>
+            <td>Rp 250.000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Desain UI/UX Responsive</td>
+            <td>1</td>
+            <td>Rp 300.000</td>
+            <td>Rp 300.000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pembuatan Website (maks. 5 halaman)</td>
+            <td>1</td>
+            <td>Rp 250.000</td>
+            <td>Rp 250.000</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Integrasi Form Kontak & WhatsApp</td>
+            <td>1</td>
+            <td>Rp 100.000</td>
+            <td>Rp 100.000</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Basic SEO & Optimasi Kecepatan</td>
+            <td>1</td>
+            <td>Rp 100.000</td>
+            <td>Rp 100.000</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Setup Hosting & Domain (1 Tahun)</td>
+            <td>1</td>
+            <td>Rp 1.500.000</td>
+            <td>Rp 1.500.000</td>
+        </tr>
+    </table>
+
+    <div class="total-box">
+        Total Pembayaran: Rp 2.500.000
+    </div>
+
+    <div class="payment">
+
+<p><strong>Bank:</strong> BCA</p>
+        <p><strong>No. Rekening:</strong> _____________</p>
+        <p><strong>Atas Nama:</strong> NIFAL</p>
+    </div>
+
+    <div class="print-btn">
+        <button onclick="window.print()">Download PDF</button>
+    </div>
+
+</div>
+
+</body>
+</html>
